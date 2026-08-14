@@ -1,0 +1,26 @@
+# Diagrama de flujo diseñado en clase:
+#  1. [Inicio] Inicio
+#  2. [Entrada] Leer salario del empleado
+#  3. [Repetición] Para cada uno de los 5 empleados
+#  4. [Decisión] ¿salario < 2 SMMLV?
+#  5. [Proceso] total = total + pago
+#  6. [Repetición] Para cada uno de los 5 empleados
+#  7. [Salida] Mostrar el total de la nómina
+#  8. [Fin] Fin
+
+INICIO
+  CONSTANTE SMMLV  <- 1423500
+  CONSTANTE AUXILIO <- 200000
+  total <- 0
+
+  PARA cada empleado DESDE 1 HASTA 5 HACER
+     LEER salario
+     pago <- salario
+     SI salario < 2 * SMMLV ENTONCES
+        pago <- pago + AUXILIO
+     FIN SI
+     total <- total + pago
+  FIN PARA
+
+  ESCRIBIR "Total nómina:", total
+FIN
